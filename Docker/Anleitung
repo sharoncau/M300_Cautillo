@@ -1,0 +1,17 @@
+[hub.docker.com](https://hub.docker.com/r/ubuntu/mysql)
+
+Bild: Unter images Bild: Container-Image-System-deutsch.png
+
+
+Ein Container-Image ist eine unveränderliche, statische Datei, die ausführbaren Code enthält, auf dessen Basis ein isolierter Prozess in der IT-Infrastruktur ausgeführt werden kann. Das Image besteht aus Systembibliotheken, Systemwerkzeugen und anderen Plattformeinstellungen, die ein Softwareprogramm zur Ausführung auf einer Containerisierungsplattform wie Docker oder CoreOS Rkt benötigt.  Das Image teilt sich den Betriebssystemkern seines Host-Rechners.
+
+Container-Images werden aus einer Dateisystemschicht kompiliert, die auf dem übergeordneten oder Basis-Image aufbaut. Diese Ebenen fördern die Wiederverwendung verschiedener Komponenten, sodass Benutzer nicht für jedes Projekt alles von Grund auf neu einrichten müssen. Technisch gesehen wird ein Basisbild für ein komplett neues Bild verwendet, während ein Elternbild eine Änderung an einem bestehenden Bild darstellt. In der Praxis werden diese Begriffe jedoch synonym verwendet.
+
+Befehle:
+docker run erstellt den Container
+-d heisst, dass der Container detached
+--name mysql-container selsbterkläred, definiert den Namen des Containers
+-p 3306:3306 erstellt eine Portweiterleitung. Verwendung HOSTPORT:CONTAINERPORT
+-e MYSQL_ROOT_PASSWORD=shaorn setzt das Root Passwort auf sharon.
+Nun läuft der Container. Jetzt können wir auf diesen Verbinden. Dies machen wir indem wir diesen Befehl verwenden.
+docker exec -it mysql-container /bin/bash/
